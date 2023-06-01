@@ -10,6 +10,8 @@ public class SwitchModButtonBehavior : MonoBehaviour
     public string immersionTexte;
     public TMP_Text tmp;
     public SwitchModImageBehavior switchModImage;
+    public SwitchModImageBehavior switchShopImage;
+    public ShopInfoBehavior shopInterface;
 
     // Start is called before the first frame update
     void Start()
@@ -34,5 +36,7 @@ public class SwitchModButtonBehavior : MonoBehaviour
             tmp.SetText(creativeTexte);
         }
         switchModImage.changeMod();
+        switchShopImage.changeMod();
+        shopInterface.changeMod();
     }
 }
