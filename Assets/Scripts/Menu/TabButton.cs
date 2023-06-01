@@ -33,6 +33,6 @@ public class TabButton : MonoBehaviour, IPointerClickHandler
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

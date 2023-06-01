@@ -8,7 +8,6 @@ public class TabGroup : MonoBehaviour
     public List<TabButton> tabButtons;
     public TabButton selectedTab;
     public List<GameObject> objectsToSwap;
-    public ContentBackgroundBehavior backgroundBehavior;
 
     public void Subscribe(TabButton button)
     {
@@ -26,12 +25,11 @@ public class TabGroup : MonoBehaviour
         ResetTabs();
         button.image.color = button.selectedColor;
         int index = button.transform.GetSiblingIndex();
-        for (int i=0; i<objectsToSwap.Count; i++)
+        for (int i = 0; i < objectsToSwap.Count; i++)
         {
             if (i == index)
             {
                 objectsToSwap[i].SetActive(true);
-                backgroundBehavior.changeColor(i);
             }
             else
             {

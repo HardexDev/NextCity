@@ -7436,6 +7436,7 @@ MonoBehaviour:
   - {fileID: 139739120}
   - {fileID: 1125139068}
   - {fileID: 364922626}
+  backgroundBehavior: {fileID: 0}
 --- !u!1 &1072135619
 GameObject:
   m_ObjectHideFlags: 0
@@ -14314,6 +14315,7 @@ MonoBehaviour:
   - {fileID: 1131958592}
   - {fileID: 113296588}
   - {fileID: 1707047726}
+  backgroundBehavior: {fileID: 0}
 --- !u!1 &1885743268
 GameObject:
   m_ObjectHideFlags: 0
