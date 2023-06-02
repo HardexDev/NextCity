@@ -22,8 +22,17 @@ public class RulerBehavior : MonoBehaviour
 
     public void onCreatingNewGame()
     {
-        Debug.Log("test");
         StartCoroutine(CreateNewGame());
+    }
+
+    public void onContinueGame()
+    {
+
+    }
+
+    public void onOpeningParameters()
+    {
+
     }
 
     IEnumerator CreateNewGame()
