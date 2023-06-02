@@ -8,6 +8,7 @@ public class TabGroup : MonoBehaviour
     public List<TabButton> tabButtons;
     public TabButton selectedTab;
     public List<GameObject> objectsToSwap;
+    public ContentBackgroundBehavior background;
 
     public void Subscribe(TabButton button)
     {
@@ -30,6 +31,10 @@ public class TabGroup : MonoBehaviour
             if (i == index)
             {
                 objectsToSwap[i].SetActive(true);
+                if(background)
+                {
+                    background.changeColor(i);
+                }
             }
             else
             {
