@@ -552,7 +552,7 @@ GameObject:
   - component: {fileID: 7084725872642719952}
   m_Layer: 0
   m_Name: Road_All_Directions
-  m_TagString: Untagged
+  m_TagString: Batiment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

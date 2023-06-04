@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 124484610181146935}
   m_Layer: 0
   m_Name: Post_office
-  m_TagString: Untagged
+  m_TagString: Batiment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
