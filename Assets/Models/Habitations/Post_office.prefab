@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 124484610181146934}
   - component: {fileID: 124484610181146933}
   - component: {fileID: 124484610181146935}
+  - component: {fileID: -5401344133313194817}
+  - component: {fileID: -1310167023182678909}
   m_Layer: 0
   m_Name: Post_office
   m_TagString: Batiment
@@ -250,3 +252,47 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!114 &-5401344133313194817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5362748168927074201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0628c0e6dd75b94a952d4d8cb8ee464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionProperty:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Action Property
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: e70c3032-841c-4a78-91ca-583f0b79d9f8
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  engineScript: {fileID: 0}
+--- !u!114 &-1310167023182678909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5362748168927074201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31d596eb9651e2542a1e0c652fea1746, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cout: 350
+  revenu: 0
+  ecologie: 40
+  habitants: 50
+  consoEnergie: 60
+  prodEnergie: 0
+  prodAgricole: 0

@@ -29,7 +29,7 @@ public class SwitchModButtonBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(XROrigin.transform.position.y != CamHeightOffset && tmp.text == creativeTexte) //ajout de l'offset de hauteur de cam en mode immersion
+        if(XROrigin.transform.position.y != CamHeightOffset && tmp.text == immersionTexte) //ajout de l'offset de hauteur de cam en mode immersion
         {
             Vector3 newPos = XROrigin.transform.position;
             newPos.y = CamHeightOffset; //ajout d'une hauteur

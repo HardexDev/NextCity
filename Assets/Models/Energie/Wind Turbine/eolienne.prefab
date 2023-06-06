@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 271545363310072011}
   - component: {fileID: 271545363310072009}
   - component: {fileID: 271545363310072010}
+  - component: {fileID: 2343619411817418020}
   m_Layer: 0
   m_Name: eolienne
   m_TagString: Batiment
@@ -316,6 +317,25 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!114 &2343619411817418020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2296829237927171857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31d596eb9651e2542a1e0c652fea1746, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cout: 200
+  revenu: 0
+  ecologie: 80
+  habitants: 0
+  consoEnergie: 25
+  prodEnergie: 85
+  prodAgricole: 0
 --- !u!1 &4161946294377845990
 GameObject:
   m_ObjectHideFlags: 0

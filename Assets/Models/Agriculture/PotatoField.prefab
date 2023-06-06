@@ -844,6 +844,8 @@ GameObject:
   - component: {fileID: -5770922454455106810}
   - component: {fileID: -906415565796717018}
   - component: {fileID: 3968676138837286204}
+  - component: {fileID: -1342500318954610405}
+  - component: {fileID: -6622740542896223249}
   m_Layer: 0
   m_Name: PotatoField
   m_TagString: Batiment
@@ -1180,6 +1182,50 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.020000001, y: 0.020000005, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-1342500318954610405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890786757477613948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0628c0e6dd75b94a952d4d8cb8ee464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionProperty:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Action Property
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: e70c3032-841c-4a78-91ca-583f0b79d9f8
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  engineScript: {fileID: 0}
+--- !u!114 &-6622740542896223249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890786757477613948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31d596eb9651e2542a1e0c652fea1746, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cout: 50
+  revenu: 0
+  ecologie: 70
+  habitants: 0
+  consoEnergie: 20
+  prodEnergie: 0
+  prodAgricole: 80
 --- !u!1 &897195191111431939
 GameObject:
   m_ObjectHideFlags: 0

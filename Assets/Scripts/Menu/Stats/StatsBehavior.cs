@@ -11,19 +11,28 @@ public class StatsBehavior : MonoBehaviour
     public TMP_Text habitantsTMP;
     public TMP_Text energieTMP;
     public TMP_Text nourritureTMP;
-    public TMP_Text eauTMP;
+
+    [SerializeField]
+    private EngineScript engineScript;
+    IStatsInterface data;
 
     // Start is called before the first frame update
     void Start()
     {
-        IStatsInterface data = new IStatsInterface(75f, 8584000f, 20f, 840000f, 88.92f, 97f, 100f);
-        displayData(data);
+        UpdateData();
+
+        InvokeRepeating("UpdateData", 1f, 5f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+    }
+
+    void UpdateData()
+    {
+        data = new IStatsInterface(engineScript.Satisfaction, engineScript.Argent, engineScript.Ecologie, engineScript.Habitants, engineScript.Energie, engineScript.Agriculture);
+        displayData(data);
     }
 
     public void displayData(IStatsInterface data)
@@ -65,7 +74,5 @@ public class StatsBehavior : MonoBehaviour
         energieTMP.SetText(data.energie.ToString() + "% (conso / prod)");
 
         nourritureTMP.SetText(data.nourriture.ToString() + "% (conso / prod)");
-
-        eauTMP.SetText(data.eau.ToString() + "% (conso / prod)");
     }
 }

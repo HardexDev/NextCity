@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 5971625648954860335}
   - component: {fileID: 5971625648954860332}
   - component: {fileID: 5971625648954860334}
+  - component: {fileID: -2119133679065057498}
+  - component: {fileID: 7682858858314203127}
   m_Layer: 0
   m_Name: CentraleCharbon
   m_TagString: Batiment
@@ -254,3 +256,47 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!114 &-2119133679065057498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274873612378366865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0628c0e6dd75b94a952d4d8cb8ee464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionProperty:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Action Property
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: e70c3032-841c-4a78-91ca-583f0b79d9f8
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  engineScript: {fileID: 0}
+--- !u!114 &7682858858314203127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274873612378366865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31d596eb9651e2542a1e0c652fea1746, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cout: 300
+  revenu: 0
+  ecologie: 10
+  habitants: 0
+  consoEnergie: 90
+  prodEnergie: 100
+  prodAgricole: 0

@@ -12,7 +12,7 @@ public class IStatsInterface
     public float nourriture { get; set; }
     public float eau { get; set; }
 
-    public IStatsInterface(float s, float a, float m, float h, float e, float n, float ea)
+    public IStatsInterface(float s, float a, float m, float h, float e, float n)
     {
         satisfaction = s;
         argent = a;
@@ -20,7 +20,6 @@ public class IStatsInterface
         habitants = h;
         energie = e;
         nourriture = n;
-        eau = ea;
     }
 
     public void createObject(
@@ -29,8 +28,7 @@ public class IStatsInterface
             float mal,
             float hab,
             float ener,
-            float nourr,
-            float e
+            float nourr
         )
     {
         satisfaction = satis;
@@ -39,6 +37,5 @@ public class IStatsInterface
         habitants = hab;
         energie = ener;
         nourriture = nourr;
-        eau = e;
     }
 }

@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 4376208931747035381}
   - component: {fileID: 6904669822869316429}
   - component: {fileID: 284743532698148353}
+  - component: {fileID: 3834475310448425377}
+  - component: {fileID: 7576154213289078013}
   m_Layer: 0
   m_Name: Bench
   m_TagString: Batiment
@@ -30,8 +32,8 @@ Transform:
   m_GameObject: {fileID: 4395011737894826792}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 75.14056, y: 0.07, z: 105.787506}
-  m_LocalScale: {x: 2.907581, y: 2.907581, z: 2.907581}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.9999999, y: 1.9999999, z: 1.9999999}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -251,3 +253,47 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!114 &3834475310448425377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4395011737894826792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0628c0e6dd75b94a952d4d8cb8ee464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionProperty:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Action Property
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: e70c3032-841c-4a78-91ca-583f0b79d9f8
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  engineScript: {fileID: 0}
+--- !u!114 &7576154213289078013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4395011737894826792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31d596eb9651e2542a1e0c652fea1746, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cout: 20
+  revenu: 0
+  ecologie: 0
+  habitants: 0
+  consoEnergie: 0
+  prodEnergie: 0
+  prodAgricole: 0
