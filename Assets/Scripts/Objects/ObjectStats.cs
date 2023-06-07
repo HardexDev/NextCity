@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class ObjectStats : MonoBehaviour
 {
-    public float cout; // Coût de l'objet
+    public float cout; // Coï¿½t de l'objet
     public float revenu; // Combien rapporte l'objet
-    public float ecologie; // Pourcentage d'écologie de l'objet
+    public float ecologie; // Pourcentage d'ï¿½cologie de l'objet
     public int habitants; // Nombre d'habitants que rapporte 
-    public float consoEnergie; // Consommation d'énergie
-    public float prodEnergie; // Production d'énergie
+    public float consoEnergie; // Consommation d'ï¿½nergie
+    public float consoAgricole;
+    public float prodEnergie; // Production d'ï¿½nergie
     public float prodAgricole; // Production agricole
+    public float malusEco;
 }

@@ -16,6 +16,9 @@ public class StatsBehavior : MonoBehaviour
     private EngineScript engineScript;
     IStatsInterface data;
 
+    private Color baseColor = new Color(0, 0, 0, 255);
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +40,7 @@ public class StatsBehavior : MonoBehaviour
 
     public void displayData(IStatsInterface data)
     {
-        satisfactionTMP.SetText(data.satisfaction.ToString() + "%");
+        satisfactionTMP.SetText(string.Format("{0:0.##}", data.satisfaction) + "%");
 
         string roundArgent;
         if(data.argent < 1000)
@@ -54,7 +57,7 @@ public class StatsBehavior : MonoBehaviour
         }
         argentTMP.SetText(roundArgent + " €");
 
-        malusTMP.SetText(data.malus.ToString() + "%");
+        malusTMP.SetText(string.Format("{0:0.##}", data.malus) + "%");
 
         string roundHab;
         if (data.habitants < 1000)
@@ -71,8 +74,22 @@ public class StatsBehavior : MonoBehaviour
         }
         habitantsTMP.SetText(roundHab.ToString() + " habitants");
 
-        energieTMP.SetText(data.energie.ToString() + "% (conso / prod)");
 
-        nourritureTMP.SetText(data.nourriture.ToString() + "% (conso / prod)");
+        
+        energieTMP.SetText(string.Format("{0:0.##}", data.energie) + "% (conso / prod)");
+        if(data.energie > 100f){
+            energieTMP.color = new Color(255, 0, 0, 255);
+        }
+        else{
+            energieTMP.color = baseColor;
+        }
+
+        nourritureTMP.SetText(string.Format("{0:0.##}", data.nourriture) + "% (conso / prod)");
+        if(data.nourriture > 100f){
+            nourritureTMP.color = new Color(255, 0, 0, 255);
+        }
+        else{
+            nourritureTMP.color = baseColor;
+        }
     }
 }

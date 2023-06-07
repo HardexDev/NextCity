@@ -32728,7 +32728,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8743606455855772325}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
@@ -32899,8 +32899,10 @@ MonoBehaviour:
   ecologie: 70
   habitants: 0
   consoEnergie: 20
+  consoAgricole: 0
   prodEnergie: 0
   prodAgricole: 80
+  malusEco: 0
 --- !u!1 &8782570596415461158
 GameObject:
   m_ObjectHideFlags: 0

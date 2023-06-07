@@ -129,7 +129,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4621138684035140583}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
@@ -295,10 +295,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31d596eb9651e2542a1e0c652fea1746, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cout: 400
+  cout: 2000
   revenu: 0
-  ecologie: 85
+  ecologie: 0
   habitants: 0
-  consoEnergie: 10
-  prodEnergie: 95
+  consoEnergie: 0
+  consoAgricole: 0
+  prodEnergie: 2500
   prodAgricole: 0
+  malusEco: 1

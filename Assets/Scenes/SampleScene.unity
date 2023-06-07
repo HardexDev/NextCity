@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.112726726, g: 0.28158873, b: 0.7091778, a: 1}
+  m_IndirectSpecularColor: {r: 0.112718135, g: 0.2815874, b: 0.70917743, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -462,6 +462,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5947303670816709107, guid: 048a636fafb21d84a991b787e3fbef41, type: 3}
+      propertyPath: consoAgricole
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 7962177459225388644, guid: 048a636fafb21d84a991b787e3fbef41, type: 3}
       propertyPath: m_Name
       value: Bakery
@@ -1803,6 +1807,18 @@ PrefabInstance:
     - target: {fileID: 274873612378366865, guid: 316634ebba2097446bf609cd6510cc80, type: 3}
       propertyPath: m_Name
       value: CentraleCharbon
+      objectReference: {fileID: 0}
+    - target: {fileID: 7682858858314203127, guid: 316634ebba2097446bf609cd6510cc80, type: 3}
+      propertyPath: ecologie
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7682858858314203127, guid: 316634ebba2097446bf609cd6510cc80, type: 3}
+      propertyPath: prodEnergie
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7682858858314203127, guid: 316634ebba2097446bf609cd6510cc80, type: 3}
+      propertyPath: consoEnergie
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8703679894381258938, guid: 316634ebba2097446bf609cd6510cc80, type: 3}
       propertyPath: m_RootOrder
@@ -4134,7 +4150,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4032655577266110052, guid: b9fa82a66ce606241a9c9720069dd054, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 107.1
+      value: 138.83
       objectReference: {fileID: 0}
     - target: {fileID: 4032655577266110052, guid: b9fa82a66ce606241a9c9720069dd054, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4142,7 +4158,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4032655577266110052, guid: b9fa82a66ce606241a9c9720069dd054, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 97.11
+      value: 83.84
       objectReference: {fileID: 0}
     - target: {fileID: 4032655577266110052, guid: b9fa82a66ce606241a9c9720069dd054, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6407,6 +6423,10 @@ PrefabInstance:
     - target: {fileID: 348648925082633390, guid: d060d3043f8628343b0eb0cf90231330, type: 3}
       propertyPath: m_Name
       value: Tree_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246562706940133469, guid: d060d3043f8628343b0eb0cf90231330, type: 3}
+      propertyPath: ecologie
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6605050923102281755, guid: d060d3043f8628343b0eb0cf90231330, type: 3}
       propertyPath: m_RootOrder

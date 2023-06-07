@@ -14,6 +14,19 @@ public class EngineScript : MonoBehaviour
     private float energie = 0f;
     private float agriculture = 0f;
 
+
+
+    private float malusSatisfaction = 0f;
+    private float ecologiepts = 0f;
+    private float consoEnergie = 0f; // Consommation d'�nergie
+    private float consoAgricole = 0f;
+    private float prodEnergie = 0f; // Production d'�nergie
+    private float prodAgricole = 0f; // Production agricole
+    private float malusEco = 0f;
+    private bool malusEner = false;
+    private bool malusAgri = false;
+
+
     public float Argent
     {
         get { return argent; }
@@ -50,6 +63,12 @@ public class EngineScript : MonoBehaviour
         set { agriculture = value; }
     }
 
+     public float MalusEco
+    {
+        get { return malusEco; }
+        set { malusEco = value; }
+    }
+
     private float argentInterval = 5f;
 
     void Start()
@@ -57,7 +76,8 @@ public class EngineScript : MonoBehaviour
         List<GameObject> allGameObjects = GameObject.FindGameObjectsWithTag("Batiment").ToList();
         foreach (GameObject gameObject in allGameObjects)
         {
-            allObjectsStats.Add(gameObject.GetComponent<ObjectStats>());
+            //allObjectsStats.Add(gameObject.GetComponent<ObjectStats>());
+            AddGameObjectInit(gameObject.GetComponent<ObjectStats>());
         }
         InvokeRepeating("ComputeArgent", 1f, argentInterval);
     }
@@ -66,12 +86,72 @@ public class EngineScript : MonoBehaviour
     {
         allObjectsStats.Add(gameObject);
         RemoveArgent(gameObject.cout);
+        habitants += gameObject.habitants;
+        consoAgricole += gameObject.consoAgricole;
+        consoEnergie += gameObject.consoEnergie;
+        prodAgricole += gameObject.prodAgricole;
+        prodEnergie += gameObject.prodEnergie;
+        ecologiepts += gameObject.ecologie;
+        malusEco += gameObject.malusEco;
+        ComputePourcent();
+    }
+
+     public void AddGameObjectInit(ObjectStats gameObject)
+    {
+        allObjectsStats.Add(gameObject);
+        habitants += gameObject.habitants;
+        consoAgricole += gameObject.consoAgricole;
+        consoEnergie += gameObject.consoEnergie;
+        prodAgricole += gameObject.prodAgricole;
+        prodEnergie += gameObject.prodEnergie;
+        ecologiepts += gameObject.ecologie;
+        malusEco += gameObject.malusEco;
+        ComputePourcent();
     }
 
     public void RemoveGameObject(ObjectStats gameObject)
     {
         allObjectsStats.RemoveAll(gObject => gObject.GetInstanceID() == gameObject.GetInstanceID());
         AddArgent(gameObject.cout/2);
+        habitants -= gameObject.habitants;
+        consoAgricole -= gameObject.consoAgricole;
+        consoEnergie -= gameObject.consoEnergie;
+        prodAgricole -= gameObject.prodAgricole;
+        prodEnergie -= gameObject.prodEnergie;
+        ecologiepts -= gameObject.ecologie;
+        malusEco -= gameObject.malusEco;
+        ComputePourcent();
+    }
+
+
+    private void ComputePourcent(){
+
+        agriculture = 100f*consoAgricole/prodAgricole;
+        if(consoAgricole > prodAgricole && !malusAgri){ //surconsommation
+            malusSatisfaction += 1;
+            malusAgri = true;
+        }
+
+        if(consoAgricole < prodAgricole && malusAgri){ //fin de surconsommation
+            malusSatisfaction -= 1;
+            malusAgri = false;
+        }
+
+        energie = 100f*consoEnergie/prodEnergie;
+        if(consoEnergie > prodEnergie && !malusEner){ //surconsommation
+            malusSatisfaction += 1;
+            malusEner = true;
+        }
+
+        if(consoEnergie < prodEnergie && malusEner){ //fin de surconsommation
+            malusSatisfaction -= 1;
+            malusEner = false;
+        }
+
+        ecologie = ecologiepts/allObjectsStats.Count;
+
+        //satisfaction -> 50% la valeur écologique de la ville et 50% concerne les malus
+        satisfaction = ecologie/2 + 50 - 10*(malusEco + malusSatisfaction);
     }
 
     private void ComputeArgent()
