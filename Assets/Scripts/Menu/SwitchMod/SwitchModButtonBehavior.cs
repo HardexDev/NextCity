@@ -19,20 +19,28 @@ public class SwitchModButtonBehavior : MonoBehaviour
 
     private Pose old_god_pos;
     private float CamHeightOffset = 1.8f; //offset hauteur des yeux
+    private float CamConstructionOffset;
 
     // Start is called before the first frame update
     void Start()
     {
         tmp.SetText(immersionTexte);
+        CamConstructionOffset = XROrigin.transform.position.y;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(XROrigin.transform.position.y != CamHeightOffset && tmp.text == immersionTexte) //ajout de l'offset de hauteur de cam en mode immersion
+        if(XROrigin.transform.position.y != CamHeightOffset && tmp.text != immersionTexte) //ajout de l'offset de hauteur de cam en mode immersion
         {
             Vector3 newPos = XROrigin.transform.position;
             newPos.y = CamHeightOffset; //ajout d'une hauteur
+            XROrigin.transform.position = newPos;
+        }
+        if(XROrigin.transform.position.y != CamConstructionOffset && tmp.text == immersionTexte) //ajout de l'offset de hauteur de cam en mode construction
+        {
+            Vector3 newPos = XROrigin.transform.position;
+            newPos.y = CamConstructionOffset; //ajout d'une hauteur
             XROrigin.transform.position = newPos;
         }
 
