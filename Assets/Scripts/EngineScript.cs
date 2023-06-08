@@ -113,6 +113,8 @@ public class EngineScript : MonoBehaviour
     {
         allObjectsStats.RemoveAll(gObject => gObject.GetInstanceID() == gameObject.GetInstanceID());
         AddArgent(gameObject.cout/2);
+        Debug.Log("removing " + gameObject.habitants + " habitants");
+
         habitants -= gameObject.habitants;
         consoAgricole -= gameObject.consoAgricole;
         consoEnergie -= gameObject.consoEnergie;
@@ -120,6 +122,9 @@ public class EngineScript : MonoBehaviour
         prodEnergie -= gameObject.prodEnergie;
         ecologiepts -= gameObject.ecologie;
         malusEco -= gameObject.malusEco;
+
+        Debug.Log("habitants : " + habitants);
+
         ComputePourcent();
     }
 
@@ -148,7 +153,9 @@ public class EngineScript : MonoBehaviour
             malusEner = false;
         }
 
-        ecologie = ecologiepts/allObjectsStats.Count;
+
+
+        ecologie = ecologiepts/allObjectsStats.Count(obj => obj.ecologie != 0);
 
         //satisfaction -> 50% la valeur écologique de la ville et 50% concerne les malus
         satisfaction = ecologie/2 + 50 - 10*(malusEco + malusSatisfaction);

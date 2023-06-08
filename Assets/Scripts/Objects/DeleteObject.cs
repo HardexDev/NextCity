@@ -8,7 +8,7 @@ public class DeleteObject : MonoBehaviour
 {
     private XRGrabInteractable grabInteractable;
     public InputActionProperty actionProperty;
-    public EngineScript engineScript;
+    private EngineScript engineScript;
 
     private bool isHovered = false;
 
@@ -20,6 +20,11 @@ public class DeleteObject : MonoBehaviour
         // Register event callbacks
         grabInteractable.hoverEntered.AddListener(OnGrab);
         grabInteractable.hoverExited.AddListener(OnRelease);
+    }
+
+    private void Start()
+    {
+        engineScript = EngineScriptHolder.Instance.sharedEngineScript;
     }
 
     private void OnGrab(HoverEnterEventArgs args)

@@ -70,6 +70,7 @@ public class SwitchModButtonBehavior : MonoBehaviour
 
     private void setGod()
     {
+        old_god_pos.position.y = 28.34f;
         XROrigin.transform.position = old_god_pos.position;
         XROrigin.transform.rotation = old_god_pos.rotation;
         XRComponent_enabled(true);
